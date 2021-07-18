@@ -56,3 +56,7 @@ Sample output:
     "created_at": "2021-07-18T16:22:31.558357Z"
 }
 ```
+
+## Deployment
+
+The project comes with a Dockerfile that packages the application code and runtime packages. This is a convenient point of departure as it allows the application to be hosted on a variety of hosted solutions such as Kubernetes or managed PaaS solutions like (ECS, Heroku, Cloud Run). The Docker approach also makes it easy to accommodate several deployment options and scaling considerations. 
