@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from url_shortner.views import ShortenUrlView
+from url_shortner.views import ShortenUrlView, decode
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('shorten/', ShortenUrlView.as_view())
+    path('shorten/', ShortenUrlView.as_view()),
+    path('url/<str:url_hash>/', decode),
 ]
