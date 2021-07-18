@@ -27,6 +27,8 @@ pip install -r requirements.txt
 
 ## Endpoints exposed
 
+Refer to the postman collection `url_shortener.postman_collection.json` for sample endpoints used in this app.
+
 ### `/shorten/`
 Takes in a URL string in the POST body and returns a shorten link and usage stats of the URL. 
 

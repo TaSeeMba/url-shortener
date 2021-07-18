@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "6690d00c-394c-41c5-b695-913cf3da4bbb",
+		"name": "url_shortener",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Shorten url",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"long_url\": \"https://towardsdatascience.com/best-apis-for-url-shortening-using-python-2db09d1f86f0\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/shorten/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"shorten",
+						""
+					]
+				},
+				"description": "Submit a full url to retrieve shortened url"
+			},
+			"response": []
+		},
+		{
+			"name": "Decode shortened url ",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"long_url\": \"https://towardsdatascience.com/best-apis-for-url-shortening-using-python-2db09d1f86f0\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/url/da0df0698f/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"url",
+						"da0df0698f",
+						""
+					]
+				},
+				"description": "Submit the shortened url to retrieve long url and some stats"
+			},
+			"response": []
+		}
+	]
+}
